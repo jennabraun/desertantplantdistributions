@@ -9,7 +9,7 @@ Storage for derived data files and analyses
 
 These instructions describe the contents of this repository and will get you a copy of the project up and running on your local machine. 
 
-See https://jennabraun.github.io/prey_item_survey for final work up 
+See [https://jennabraun.github.io/desertantplantdistributions/] for final work up 
 
 ### Folder descriptions
 
