@@ -1,0 +1,21 @@
+[general]
+[data]
+datatype=FLT4S
+nodatavalue=nan
+byteorder=little
+nbands=4
+bandorder=BIL
+minvalue=-3.40102015734742793e+38:-3.40238698893061801e+38:-3.40151443966946892e+38:-3.40066136152153933e+38
+maxvalue=3.39931521799614497e+38:3.40026930254390074e+38:3.40235879638126894e+38:3.3971170104433012e+38
+categorical=FALSE
+[description]
+layername=PC1:PC2:PC3:PC4
+[georeference]
+nrows=631
+ncols=662
+xmin=-118.466666666666995
+ymin=32.2333333333332988
+xmax=-112.950000000000003
+ymax=37.4916666666666032
+projection=+proj=longlat +datum=WGS84 +no_defs
+wkt=GEOGCRS["unknown",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ID["EPSG",6326]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8901]],CS[ellipsoidal,2],AXIS["longitude",east,ORDER[1],ANGLEUNIT["degree",0.0174532925199433,ID["EPSG",9122]]],AXIS["latitude",north,ORDER[2],ANGLEUNIT["degree",0.0174532925199433,ID["EPSG",9122]]]]

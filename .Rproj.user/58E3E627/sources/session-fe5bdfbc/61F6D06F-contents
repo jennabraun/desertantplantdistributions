@@ -1,0 +1,446 @@
+## Community stacks
+
+```{r}
+
+# bring in and stack binaries
+
+
+
+#classification matrix
+m <- c(0, 35, 0,
+       35, 40, 1)
+m <- matrix(m, ncol = 3, byrow = TRUE)
+
+efn_bin <- stack("predictions/summedBIN_CA.grd",
+                 "predictions/summedBIN_CE.grd",
+                 "predictions/summedBIN_AG.grd",
+                 "predictions/summedBIN_FS.grd",
+                 "predictions/summedBIN_CL.grd",
+                 "predictions/summedBIN_OB.grd",
+                 "predictions/summedBIN_OBIG.grd",
+                 "predictions/summedBIN_FA.grd",
+                 "predictions/summedBIN_PJ.grd",
+                 "predictions/summedBIN_PFA.grd",
+                 "predictions/summedBIN_PFREM.grd")
+
+efn_bin <- mask(efn_bin, moj)
+names(efn_bin) <- c("CA", "CE", "AG", "FS", "CL", "OB", "OBIG", "FA", "PJ", "PFA", "PFREM")
+efn_bin <- reclassify(efn_bin, m)
+plot(efn_bin)
+
+
+efn_bin245 <- stack("predictions/summedBIN_CA_ssp245.grd",
+                    "predictions/summedBIN_CE_ssp245.grd",
+                    "predictions/summedBIN_AG_ssp245.grd",
+                    "predictions/summedBIN_FS_ssp245.grd",
+                    "predictions/summedBIN_CL_ssp245.grd",
+                    "predictions/summedBIN_OB_ssp245.grd",
+                    "predictions/summedBIN_OBIG_ssp245.grd",
+                    "predictions/summedBIN_FA_ssp245.grd",
+                    "predictions/summedBIN_PJ_ssp245.grd",
+                    "predictions/summedBIN_PFA_ssp245.grd",
+                    "predictions/summedBIN_PFREM_ssp245.grd")
+
+efn_bin245 <- mask(efn_bin245, moj)
+names(efn_bin245) <- c("CA", "CE", "AG", "FS", "CL", "OB", "OBIG", "FA", "PJ", "PFA", "PFREM")
+efn_bin245 <- reclassify(efn_bin245, m)
+plot(efn_bin245)
+
+
+efn_bin370 <- stack("predictions/summedBIN_CA_ssp370.grd",
+                    "predictions/summedBIN_CE_ssp370.grd",
+                    "predictions/summedBIN_AG_ssp370.grd",
+                    "predictions/summedBIN_FS_ssp370.grd",
+                    "predictions/summedBIN_CL_ssp370.grd",
+                    "predictions/summedBIN_OB_ssp370.grd",
+                    "predictions/summedBIN_OBIG_ssp370.grd",
+                    "predictions/summedBIN_FA_ssp370.grd",
+                    "predictions/summedBIN_PJ_ssp370.grd",
+                    "predictions/summedBIN_PFA_ssp370.grd",
+                    "predictions/summedBIN_PFREM_ssp370.grd")
+
+efn_bin370 <- mask(efn_bin370, moj)
+names(efn_bin370) <- c("CA", "CE", "AG", "FS", "CL", "OB", "OBIG", "FA", "PJ", "PFA", "PFREM")
+efn_bin370 <- reclassify(efn_bin370, m)
+plot(efn_bin370)
+
+
+
+
+#ants 
+
+ants_clim_bin <- stack("predictions/summedBIN_SX.grd", 
+                       "predictions/summedBIN_CREMD.grd", 
+                       "predictions/summedBIN_DORBI.grd", 
+                       "predictions/summedBIN_DORIN.grd", 
+                       "predictions/summedBIN_CAMPFRA.grd", 
+                       "predictions/summedBIN_CAMPOC.grd", 
+                       "predictions/summedBIN_CAMPSEM.grd", 
+                       "predictions/summedBIN_MYRKEN.grd", 
+                       "predictions/summedBIN_MYRTES.grd", 
+                       "predictions/summedBIN_MYRFLA.grd",
+                       "predictions/summedBIN_MYRMIM.grd",
+                       "predictions/summedBIN_FM.grd",
+                       "predictions/summedBIN_PHEVIS.grd",
+                       "predictions/summedBIN_LIOLUC.grd")
+
+
+names(ants_clim_bin) <- c("SX", "CREMD", "DORBI", "DORIN", "CAMPFRA", "CAMPOC", "CAMPSEM", "MYRKEN", "MYRTES", "MYRFLA", "MYRMIM", "FM", "PHEVIS", "LIOLUC")
+ants_clim_bin <- reclassify(ants_clim_bin, m)
+
+ants_clim_bin <- mask(ants_clim_bin, moj)
+plot(ants_clim_bin)
+
+
+ants_clim_bin245 <- stack("predictions/summedBIN_SX_ssp245.grd", 
+                          "predictions/summedBIN_CREMD_ssp245.grd", 
+                          "predictions/summedBIN_DORBI_ssp245.grd", 
+                          "predictions/summedBIN_DORIN_ssp245.grd", 
+                          "predictions/summedBIN_CAMPFRA_ssp245.grd", 
+                          "predictions/summedBIN_CAMPOC_ssp245.grd", 
+                          "predictions/summedBIN_CAMPSEM_ssp245.grd", 
+                          "predictions/summedBIN_MYRKEN_ssp245.grd", 
+                          "predictions/summedBIN_MYRTES_ssp245.grd", 
+                          "predictions/summedBIN_MYRFLA_ssp245.grd",
+                          "predictions/summedBIN_MYRMIM_ssp245.grd",
+                          "predictions/summedBIN_FM_ssp245.grd",
+                          "predictions/summedBIN_PHEVIS_ssp245.grd",
+                          "predictions/summedBIN_LIOLUC_ssp245.grd")
+
+
+names(ants_clim_bin245) <- c("SX", "CREMD", "DORBI", "DORIN", "CAMPFRA", "CAMPOC", "CAMPSEM", "MYRKEN", "MYRTES", "MYRFLA", "MYRMIM", "FM", "PHEVIS", "LIOLUC")
+ants_clim_bin245 <- reclassify(ants_clim_bin245, m)
+
+ants_clim_bin245 <- mask(ants_clim_bin245, moj)
+plot(ants_clim_bin245)
+
+ants_clim_bin370 <- stack("predictions/summedBIN_SX_ssp370.grd", 
+                          "predictions/summedBIN_CREMD_ssp370.grd", 
+                          "predictions/summedBIN_DORBI_ssp370.grd", 
+                          "predictions/summedBIN_DORIN_ssp370.grd", 
+                          "predictions/summedBIN_CAMPFRA_ssp370.grd", 
+                          "predictions/summedBIN_CAMPOC_ssp370.grd", 
+                          "predictions/summedBIN_CAMPSEM_ssp370.grd", 
+                          "predictions/summedBIN_MYRKEN_ssp370.grd", 
+                          "predictions/summedBIN_MYRTES_ssp370.grd", 
+                          "predictions/summedBIN_MYRFLA_ssp370.grd",
+                          "predictions/summedBIN_MYRMIM_ssp370.grd",
+                          "predictions/summedBIN_FM_ssp370.grd",
+                          "predictions/summedBIN_PHEVIS_ssp370.grd",
+                          "predictions/summedBIN_LIOLUC_ssp370.grd")
+
+
+names(ants_clim_bin370) <- c("SX", "CREMD", "DORBI", "DORIN", "CAMPFRA", "CAMPOC", "CAMPSEM", "MYRKEN", "MYRTES", "MYRFLA", "MYRMIM", "FM", "PHEVIS", "LIOLUC")
+ants_clim_bin370 <- reclassify(ants_clim_bin370, m)
+
+ants_clim_bin370 <- mask(ants_clim_bin370, moj)
+plot(ants_clim_bin370)
+
+
+#community formats
+
+all_bin <- stack(ants_clim_bin, efn_bin)
+plot(all_bin)
+
+all_245 <- stack(ants_clim_bin245, efn_bin245)
+all_370 <- stack(ants_clim_bin370, efn_bin370)
+pts <- dismo::randomPoints(all_bin, 5000)
+dfall <- raster::extract(all_bin, pts)
+comm <- as.data.frame(dfall)
+
+dfall245 <- raster::extract(all_245, pts)
+comm245 <- as.data.frame(dfall245)
+
+dfall370 <- raster::extract(all_370, pts)
+comm370 <- as.data.frame(dfall370)
+
+diff370 <- comm370 - comm
+diff245 <- comm245 - comm
+
+
+
+# raster formats
+plot(all_370)
+plot(all_bin)
+diffrast370 <- all_370 - all_bin
+plot(diffrast370)
+plot(diffrast370[[1]])
+
+
+diffefn370 <- efn_bin370 - efn_bin
+plot(diffefn370)
+
+diffefn245 <- efn_bin245 - efn_bin
+plot(diffefn245)
+
+
+sumefn245 <- sum(diffefn245)
+plot(sumefn245)
+
+sumefn370 <- sum(diffefn370)
+plot(sumefn370)
+```
+
+## Range shifts
+
+```{r}
+#climate only binary rasters
+#need to count the 1s
+efn_bin@data@values 
+cellStats(efn_bin, "sum")
+cellStats(efn_bin245, "sum")
+cellStats(efn_bin370, "sum")
+
+efnranges$present <- cellStats(efn_bin, "sum")
+cellStats(ants_clim_bin, "sum")
+cellStats(ants_clim_bin245, "sum")
+cellStats(ants_clim_bin370, "sum")
+
+
+
+
+
+efnranges <- rbind(cellStats(efn_bin, "sum"),
+                   cellStats(efn_bin245, "sum"),
+                   cellStats(efn_bin370, "sum"))
+efnranges <- as.data.frame(efnranges)
+efnranges$treat <- c("Present", "s245", "s370")
+
+
+efnranges <- t(efnranges)
+
+colnames(efnranges) <- c("Present", "s245", "s370")
+efnranges <- efnranges[-12, ]
+
+
+efnranges <- as.data.frame(efnranges)
+str(efnranges)
+
+efnranges[] <- lapply(efnranges, as.numeric)
+efnranges <- mutate(efnranges, perc245 = (Present - s245)/Present)
+efnranges <- mutate(efnranges, perc370 = (s370 - Present)/Present)
+
+cor.test(efn_breath$b2, efnranges$perc245)
+cor.test(efn_breath$b2, efnranges$s245)
+cor.test(efn_breath$b2, efnranges$Present)
+cor.test(efn_breath$b2, efnranges$s370)
+
+cor.test(efn_breath$b2, efnranges$perc370)
+
+
+
+antranges <- rbind(cellStats(ants_clim_bin, "sum"),
+                   cellStats(ants_clim_bin245, "sum"),
+                   cellStats(ants_clim_bin370, "sum"))
+antranges <- as.data.frame(antranges)
+antranges$treat <- c("Present", "s245", "s370")
+
+antranges <- t(antranges)
+colnames(antranges) <- c("Present", "s245", "s370")
+antranges <- antranges[-15, ]
+antranges <- as.data.frame(antranges)
+
+antranges[] <- lapply(antranges, as.numeric)
+antranges <- mutate(antranges, perc245 = (Present - s245)/Present)
+antranges <- mutate(antranges, perc370 = (s370 - Present)/Present)
+
+cor.test(ants_breath$b2, antranges$perc245)
+cor.test(ants_breath$b2, antranges$Present)
+cor.test(ants_breath$b2, antranges$s245)
+cor.test(ants_breath$b2, antranges$s370)
+
+cor.test(ants_breath$b2, antranges$perc370)
+
+sd(efn_breath$b2)
+sd(ants_breath$b2)
+
+antranges$treat <- c("PRES_CLIM", "CLIM245", "CLIM370")
+
+
+#try mean difference in suitability
+
+
+```
+## Phylo dispersion
+
+```{r}
+
+#we need to extract aridity, current comm and future comm with the same extract call so that the points are the same
+
+ants_clim_bin370
+arid.rast 
+
+antphy <- stack(arid.rast, ants_clim_bin, ants_clim_bin370)
+
+dfants <- raster::extract(antphy, pts)
+dfants <- as.data.frame(dfants)
+
+
+env_pts <- select(dfants, 1)
+dfantspres <- select(dfants, 2:15)
+dfantsfuture <- select(dfants, 16:29)
+
+colnames(dfantspres) <- gsub(".1", "", colnames(dfantspres))
+
+colnames(dfantsfuture) <- gsub(".2", "", colnames(dfantsfuture))
+
+dfantspres <- select(dfantspres, CREMD, PHEVIS, SX, MYRMIM, MYRTES, MYRFLA, MYRKEN, CAMPSEM, CAMPOC, CAMPFRA, DORBI, DORIN, FM, LIOLUC)
+
+
+dfantsfuture <- select(dfantsfuture, CREMD, PHEVIS, SX, MYRMIM, MYRTES, MYRFLA, MYRKEN, CAMPSEM, CAMPOC, CAMPFRA, DORBI, DORIN, FM, LIOLUC)
+
+
+#do they need to be ordered the same?
+pruned[["tip.label"]]
+
+sespd <- ses.pd(dfants, pruned, null.model = "independentswap")
+
+mean(sespd$pd.obs.z, na.rm = TRUE)
+t.test(sespd$pd.obs.z, na.rm = TRUE)
+pdist <- cophenetic.phylo(pruned)
+ses.mpd.result <- ses.mpd(dfantspres, pdist, null.model="independentswap", abundance.weighted=FALSE, runs=99)
+ses.mpd.result$sites <- row.names(ses.mpd.result)
+
+mean(ses.mpd.result$mpd.obs.z, na.rm = TRUE)
+t.test(ses.mpd.result$mpd.obs.z, na.rm = TRUE)
+
+env_pts <- rename(env_pts, arid = wc2.1_30s_bio_12)
+pres_mpd <- cbind(env_pts, ses.mpd.result)
+
+ggplot(filter(pres_mpd, arid < 20), aes(arid, mpd.obs.z)) + geom_smooth() + geom_point()
+
+m1 <- lm(mpd.obs.z ~ arid, data = filter(pres_mpd, arid < 20))
+summary(m1)
+
+ses.mpd.future <- ses.mpd(dfantsfuture, pdist, null.model="independentswap", abundance.weighted=FALSE, runs=99)
+
+
+mean(ses.mpd.future$mpd.obs.z, na.rm = TRUE)
+t.test(ses.mpd.future$mpd.obs.z, na.rm = TRUE)
+
+t.test(ses.mpd.result$mpd.obs.z, ses.mpd.future$mpd.obs.z, na.rm = TRUE)
+
+```
+## Beta temporal
+
+```{r}
+
+
+library(betapart)
+
+b245 <- beta.temp(comm, comm245, index.family = "sorensen")
+
+comm_ants <- comm[,1:14]
+comm_efn <- comm[,15:25]
+
+comm245_ants <- comm245[,1:14]
+comm245_efn <- comm245[,15:25]
+
+b_ants <- beta.temp(comm_ants, comm245_ants, index.family = "sorensen")
+b_efn <- beta.temp(comm_efn, comm245_efn, index.family = "sorensen")
+
+# sor nans started and stayed at 0
+b_antsNan <- filter(b_ants, beta.sor == "NaN")
+ants_sor <- filter(b_ants, beta.sor != "NaN")
+mean(ants_sor$beta.sor, na.omit = TRUE)
+
+
+# sor nans started and stayed at 0
+b_efnNan <- filter(b_efn, beta.sor == "NaN")
+efn_sor <- filter(b_efn, beta.sor != "NaN")
+mean(efn_sor$beta.sor, na.omit = TRUE)
+
+
+
+
+```
+
+## Env Richness
+
+```{r}
+
+pts <- dismo::randomPoints(all, 5000)
+all <- stack(all, arid.rast)
+df2 <- raster::extract(all, pts)
+df2 <- as.data.frame(df2)
+df2$ID <- row.names(df2)
+
+df_long2 <- pivot_longer(df2, 1:2, names_to = "taxa", values_to = "rich")
+
+df_long2 <- rename(df_long2, arid = "wc2.1_30s_bio_12.1")
+
+library(glmmTMB)
+library(emmeans)
+m1 <- glmmTMB(rich ~ taxa*arid + (1|ID), data = df_long2)
+
+summary(m1)
+
+emtrends(m1, pairwise ~ "taxa", var = "arid")
+df_arid <- filter(df_long2, arid <= 10)
+ggplot(df_arid, aes(arid, rich, color = taxa)) + geom_smooth()
+
+df_long2$arid.scale <- scale(df_long2$arid)
+
+library(mgcv)
+library(performance)
+linear_ants <- gam(rich ~ arid.scale + drange + pseas + EFN, data = df)
+summary(linear_ants)
+car::anova(linear_ants, type = 2)
+check_collinearity(linear_ants)
+
+
+
+linear_efn <- gam(rich ~ , data = df)
+summary(linear_efn)
+
+plot_model(linear_ants, type = "int", terms = c("EFN, drange"))
+library(emmeans)
+
+emmeans(linear_ants, ~drange.scale*EFN)
+
+shapiro.test(resid(linear_model))
+data_plot
+
+
+smooth_model <- gam(ants ~ s(arid) + s(pseas) + s(drange) + s(EFN), data = df)
+check_concurvity(smooth_model)
+gam.check(smooth_model)
+summary(smooth_model)
+coef(smooth_model)
+smooth_model_tw <- gam(ants ~ s(arid, k = 13), family = tw(link = "log"), data = df)
+gam.check(smooth_model_tw)
+AIC(smooth_model, smooth_model_tw)
+
+
+
+summary(smooth_model)
+plot(smooth_model, page = 1, all.terms = TRUE)
+data_plot <- ggplot(data = df, aes(y = ants, x = arid)) +
+  geom_point() + geom_line(aes(y = fitted(linear_model)), colour = "red") + theme_bw()
+data_plot <- data_plot + geom_line(aes(y = fitted(smooth_model_tw)),
+                                   colour = "blue")
+data_plot
+
+AIC(linear_model, smooth_model)
+
+smooth_efn <- gam(EFN ~ s(arid), data = df)
+summary(smooth_efn)
+plot(smooth_efn, page = 1, all.terms = TRUE)
+
+data_plot <- ggplot(data = df, aes(y = EFN, x = arid)) +
+  geom_point() + geom_line(aes(y = fitted(linear_model)), colour = "red") + theme_bw()
+data_plot <- data_plot + geom_line(aes(y = fitted(smooth_efn)),
+                                   colour = "blue")
+data_plot
+
+
+AIC(linear_model, smooth_model)
+
+linear_model <- gam(ants ~ EFN, data = df)
+summary(linear_model)
+data_plot <- ggplot(data = df, aes(y = ants, x = EFN)) +
+  geom_point() + geom_line(aes(y = fitted(linear_model)), colour = "red") + theme_bw()
+data_plot
+
+
+```

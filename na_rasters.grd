@@ -1,0 +1,26 @@
+[general]
+creator=R package 'raster'
+created=2025-02-24 13:59:06
+[data]
+datatype=FLT4S
+byteorder=little
+nbands=19
+bandorder=BIL
+minvalue=-3.1875:5.71666669845581:-9.69999980926514:54:9:0:18.8075103759766:22:1:4:21:4.19999980926514:32.1614570617676:219.732528686523:14:-15.3999996185303:9.69999980926514:-9.69999980926514:0.266666620969772
+maxvalue=24.5083332061768:36.3833351135254:15.3000001907349:1052:182:23:104.494338989258:529:99:176:500:20.6416664123535:58.7912101745605:981.985473632812:46.2000007629395:11.1999998092651:44.7999992370605:33.8833312988281:33.6666679382324
+nodatavalue=-3.4e+38
+[legend]
+legendtype=
+values=
+color=
+[description]
+layername=wc2.1_30s_bio_1:wc2.1_30s_bio_10:wc2.1_30s_bio_11:wc2.1_30s_bio_12:wc2.1_30s_bio_13:wc2.1_30s_bio_14:wc2.1_30s_bio_15:wc2.1_30s_bio_16:wc2.1_30s_bio_17:wc2.1_30s_bio_18:wc2.1_30s_bio_19:wc2.1_30s_bio_2:wc2.1_30s_bio_3:wc2.1_30s_bio_4:wc2.1_30s_bio_5:wc2.1_30s_bio_6:wc2.1_30s_bio_7:wc2.1_30s_bio_8:wc2.1_30s_bio_9
+[georeference]
+nrows=631
+ncols=662
+xmin=-118.466666666667
+ymin=32.2333333333333
+xmax=-112.95
+ymax=37.4916666666667
+projection=+proj=longlat +datum=WGS84 +no_defs
+wkt=GEOGCRS["unknown",    DATUM["World Geodetic System 1984",        ELLIPSOID["WGS 84",6378137,298.257223563,            LENGTHUNIT["metre",1]],        ID["EPSG",6326]],    PRIMEM["Greenwich",0,        ANGLEUNIT["degree",0.0174532925199433],        ID["EPSG",8901]],    CS[ellipsoidal,2],        AXIS["longitude",east,            ORDER[1],            ANGLEUNIT["degree",0.0174532925199433,                ID["EPSG",9122]]],        AXIS["latitude",north,            ORDER[2],            ANGLEUNIT["degree",0.0174532925199433,                ID["EPSG",9122]]]]

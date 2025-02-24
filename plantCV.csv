@@ -1,0 +1,12 @@
+"","filename","auc","aucsd","tss","tsssd"
+"1","predictions/CV_Results_AG.csv",0.869,0,0.562,0.002
+"2","predictions/CV_Results_CA.csv",0.862,0,0.579,0.002
+"3","predictions/CV_Results_CE.csv",0.793,0,0.455,0.002
+"4","predictions/CV_Results_CL.csv",0.79,0.001,0.461,0.002
+"5","predictions/CV_Results_FA.csv",0.861,0,0.576,0.001
+"6","predictions/CV_Results_FS.csv",0.831,0,0.522,0.002
+"7","predictions/CV_Results_OB.csv",0.779,0,0.41,0.001
+"8","predictions/CV_Results_OBIG.csv",0.875,0.002,0.669,0.007
+"9","predictions/CV_Results_PFA.csv",0.843,0.001,0.554,0.004
+"10","predictions/CV_Results_PFREM.csv",0.97,0,0.919,0.001
+"11","predictions/CV_Results_PJ.csv",0.729,0.026,0.561,0.034
