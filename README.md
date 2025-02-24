@@ -1,7 +1,9 @@
 # Projected climate change scenarios spatially decouple desert EFN-ant mutualisms.
 Storage for derived data files and analyses 
 
-![Robber fly eating honeybee](/robberfly.jpg)
+![image](https://github.com/user-attachments/assets/0aea01fe-3f6b-4343-af7a-42b2e3216b2a)
+
+
 
 ## Getting Started
 
